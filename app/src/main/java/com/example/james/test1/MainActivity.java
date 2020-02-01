@@ -12,8 +12,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button bu1;
     TextView show1;
-EditText input1,input2;
-int temp1,temp2;
+    EditText input1, input2;
+    int temp1, temp2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,21 +22,21 @@ int temp1,temp2;
         setid();
 
 
-
         onclick();
         // Integer.parseInt("15")
 
     }
-    String translate(Object o)
-    {
+
+    String translate(Object o) {
         return String.valueOf(o);
     }
+
     void onclick() {
         bu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                temp1= Integer.parseInt(input1.getText().toString()) ;
-               temp2= Integer.parseInt(input2.getText().toString()) ;
+                temp1 = Integer.parseInt(input1.getText().toString());
+                temp2 = Integer.parseInt(input2.getText().toString());
 
                 // Log.e("test", "fuck
                 show1.setText(temp1 + temp2);
@@ -46,8 +47,8 @@ int temp1,temp2;
     void setid() {
         bu1 = findViewById(R.id.bu1);
         show1 = findViewById(R.id.show1);
-        input1=findViewById(R.id.input1);
-        input2=findViewById(R.id.input2);
+        input1 = findViewById(R.id.input1);
+        input2 = findViewById(R.id.input2);
     }
 
 
